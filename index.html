@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f7f3" />
+  <meta name="description" content="Carlos Bryan Coaquira Ortiz — Systems Engineer, Front-End & Shopify Developer based in Bolivia." />
+  <title>Carlos Coaquira — Shopify & Front-End Developer</title>
+  <style>
+    :root { color-scheme: light; --bg:#f7f7f3; --ink:#202521; --muted:#717871; --line:#dedfd9; --accent:#345e46; --surface:#eceee7; --pad:clamp(22px,5.3vw,94px); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font: 16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+    ::selection { background:#c7dfce; }
+    .shell { max-width:1540px; margin:auto; padding:0 var(--pad); }
+    header { min-height:95px; display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); }
+    .brand { font-size:14px; font-weight:750; letter-spacing:-.04em; line-height:1.25; }
+    .nav { display:flex; gap:clamp(14px,3vw,38px); align-items:center; font-size:13px; font-weight:550; }
+    .nav a { transition:color .2s; } .nav a:hover,.text-link:hover { color:var(--accent); }
+    .lang { background:transparent; border:1px solid var(--line); border-radius:100px; padding:8px 12px; color:var(--ink); cursor:pointer; font:inherit; font-size:12px; font-weight:700; white-space:nowrap; }
+    main { overflow:hidden; }
+    .hero { min-height:600px; padding-top:clamp(78px,12vw,163px); padding-bottom:110px; border-bottom:1px solid var(--line); position:relative; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.18em; font-size:11px; font-weight:750; color:var(--accent); }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:1060px; font-size:clamp(58px,9.5vw,145px); font-weight:520; line-height:.95; letter-spacing:-.085em; margin:27px 0 36px; }
+    h1 em { font-family:Georgia,serif; font-weight:400; letter-spacing:-.072em; }
+    .hero-bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:36px; }
+    .intro { color:#515a53; font-size:clamp(17px,2.05vw,22px); line-height:1.6; max-width:680px; margin:0; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:30px; border-radius:100px; padding:15px 22px; font-size:13px; font-weight:700; background:var(--ink); color:white; transition:transform .2s,background .2s; white-space:nowrap; }
+    .button:hover { background:var(--accent); transform:translateY(-2px); }
+    .button svg,.text-link svg { width:16px; height:16px; }
+    .section { display:grid; grid-template-columns: 31% 1fr; gap:25px; padding:100px 0; border-bottom:1px solid var(--line); }
+    .section-label { font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .section-main { max-width:850px; }
+    .statement { font-size:clamp(25px,3.7vw,49px); letter-spacing:-.05em; line-height:1.25; font-weight:440; margin-bottom:27px; }
+    .body-copy { max-width:670px; color:#626a62; font-size:16px; line-height:1.85; }
+    .stats { display:flex; gap:54px; margin-top:42px; flex-wrap:wrap; }
+    .stat strong { font-size:40px; line-height:1; font-weight:500; letter-spacing:-.06em; display:block; }
+    .stat span { display:block; font-size:12px; color:var(--muted); margin-top:12px; }
+    .experience-item { display:grid; grid-template-columns:1fr auto; gap:15px; padding:25px 0; border-top:1px solid var(--line); }
+    .experience-item:first-child { padding-top:0; border-top:0; }
+    .role { font-size:23px; font-weight:600; letter-spacing:-.045em; margin:0 0 2px; }
+    .company { font-size:14px; color:var(--accent); font-weight:700; margin:0 0 10px; }
+    .item-description { font-size:14px; color:var(--muted); max-width:600px; margin:0; }
+    .date { font-size:12px; color:var(--muted); white-space:nowrap; margin-top:7px; }
+    .pills { display:flex; gap:9px; flex-wrap:wrap; }
+    .pill { font-size:13px; padding:9px 14px; border:1px solid #d6dad2; border-radius:100px; color:#454d46; }
+    .project-row { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:25px 0; border-top:1px solid var(--line); transition:padding .2s; }
+    .project-row:hover { padding-left:8px; }
+    .project-row:last-child { border-bottom:1px solid var(--line); }
+    .project-title { font-size:clamp(18px,2.2vw,25px); font-weight:600; letter-spacing:-.04em; }
+    .project-sub { display:block; font-size:12px; color:var(--muted); margin-top:2px; }
+    .project-row svg { width:20px; height:20px; flex:none; }
+    .contact { padding:100px 0 110px; }
+    .contact h2 { font-size:clamp(52px,8vw,110px); font-weight:480; letter-spacing:-.075em; line-height:1; max-width:850px; margin:24px 0 34px; }
+    .contact p { color:var(--muted); max-width:600px; margin-bottom:35px; }
+    .contact-actions { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+    .text-link { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700; border-bottom:1px solid currentColor; padding-bottom:4px; }
+    footer { padding:25px 0 35px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:15px; font-size:12px; color:var(--muted); }
+    .status { display:inline-flex; gap:9px; align-items:center; }
+    .dot { width:7px; height:7px; background:#6c9b72; border-radius:50%; }
+    @media(max-width:760px) {
+      header { min-height:76px; } .nav { gap:15px; } .nav-about { display:none; }
+      .hero { min-height:auto; padding-top:86px; padding-bottom:75px; }
+      h1 { font-size:clamp(53px,12vw,91px); }
+      .hero-bottom { align-items:flex-start; flex-direction:column; }
+      .section { grid-template-columns:1fr; gap:30px; padding:66px 0; }
+      .contact { padding:75px 0; }
+      .stats { gap:35px; }
+      .experience-item { grid-template-columns:1fr; gap:2px; }
+      .date { grid-row:1; margin:0 0 9px; }
+      footer { align-items:flex-start; flex-direction:column; }
+    }
+    @media(prefers-reduced-motion:reduce) { *, *::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="#top" aria-label="Go to top">CARLOS<br>COAQUIRA<span style="color:var(--accent)">.</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-about" href="#about" data-en="About" data-es="Sobre mí">About</a>
+        <a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a>
+        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+        <button class="lang" id="langButton" type="button" aria-label="Change language">ES / EN</button>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow" data-en="Systems engineer · Shopify specialist · Bolivia" data-es="Ingeniero en Sistemas · Especialista en Shopify · Bolivia">Systems engineer · Shopify specialist · Bolivia</div>
+        <h1 id="hero-title">Carlos<br><em>Coaquira.</em></h1>
+        <div class="hero-bottom">
+          <p class="intro" data-en="I build thoughtful digital experiences for brands, combining e-commerce development, technical problem-solving and collaborative work." data-es="Creo experiencias digitales para marcas, combinando desarrollo de comercio electrónico, soluciones técnicas y trabajo colaborativo.">I build thoughtful digital experiences for brands, combining e-commerce development, technical problem-solving and collaborative work.</p>
+          <a href="#contact" class="button"><span data-en="Let's talk" data-es="Hablemos">Let's talk</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+        </div>
+      </section>
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-label" id="about-title" data-en="01 / About me" data-es="01 / Sobre mí">01 / About me</div>
+        <div class="section-main">
+          <h2 class="statement" data-en="Development experience with a focus on the details that make digital experiences work." data-es="Experiencia en desarrollo, con atención a los detalles que hacen funcionar una experiencia digital.">Development experience with a focus on the details that make digital experiences work.</h2>
+          <p class="body-copy" data-en="I'm a Systems Engineer and web developer based in Cochabamba, Bolivia. I've worked on e-commerce projects, custom storefronts, team coordination and client-facing technical discussions. I also have graphic design internship experience and certified training in Scrum Master practices." data-es="Soy Ingeniero en Sistemas y desarrollador web de Cochabamba, Bolivia. He trabajado en proyectos de comercio electrónico, personalización de tiendas, coordinación de equipos y reuniones técnicas con clientes. También cuento con experiencia de pasantía en diseño gráfico y formación certificada en Scrum Master.">I'm a Systems Engineer and web developer based in Cochabamba, Bolivia. I've worked on e-commerce projects, custom storefronts, team coordination and client-facing technical discussions. I also have graphic design internship experience and certified training in Scrum Master practices.</p>
+          <div class="stats"><div class="stat"><strong>4+</strong><span data-en="Years of professional experience" data-es="Años de experiencia profesional">Years of professional experience</span></div><div class="stat"><strong>2022</strong><span data-en="Started at BECA" data-es="Inicio en BECA">Started at BECA</span></div></div>
+        </div>
+      </section>
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-label" id="experience-title" data-en="02 / Experience" data-es="02 / Experiencia">02 / Experience</div>
+        <div class="section-main">
+          <article class="experience-item"><div><h3 class="role">Shopify Developer</h3><p class="company">BECA</p><p class="item-description" data-en="Developing and customizing e-commerce stores, implementing custom functionality, coordinating tasks and collaborating with developers and clients." data-es="Desarrollo y personalización de tiendas online, implementación de funcionalidades, coordinación de tareas y colaboración con desarrolladores y clientes.">Developing and customizing e-commerce stores, implementing custom functionality, coordinating tasks and collaborating with developers and clients.</p></div><div class="date" data-en="May 2022 — Present" data-es="May 2022 — Actualidad">May 2022 — Present</div></article>
+          <article class="experience-item"><div><h3 class="role" data-en="Web Developer" data-es="Desarrollador Web">Web Developer</h3><p class="company">voraz.pro</p><p class="item-description" data-en="Building websites for small and medium-sized businesses and individual clients." data-es="Desarrollo de sitios web para pequeñas y medianas empresas y clientes particulares.">Building websites for small and medium-sized businesses and individual clients.</p></div><div class="date" data-en="Nov 2021 — Apr 2022" data-es="Nov 2021 — Abr 2022">Nov 2021 — Apr 2022</div></article>
+          <article class="experience-item"><div><h3 class="role" data-en="Freelance Web Developer" data-es="Desarrollador Web Independiente">Freelance Web Developer</h3><p class="company">Freelance</p><p class="item-description" data-en="Developing and modifying website modules for organizations and client projects." data-es="Desarrollo y modificación de módulos web para organizaciones y proyectos de clientes.">Developing and modifying website modules for organizations and client projects.</p></div><div class="date">2021</div></article>
+          <article class="experience-item"><div><h3 class="role" data-en="Graphic Design Intern" data-es="Pasante de Diseño Gráfico">Graphic Design Intern</h3><p class="company">Grupo Cognos</p><p class="item-description" data-en="Creating visual designs and updating digital content." data-es="Creación de piezas visuales y actualización de contenido digital.">Creating visual designs and updating digital content.</p></div><div class="date">2021 — 2022</div></article>
+        </div>
+      </section>
+      <section class="section" id="expertise" aria-labelledby="expertise-title">
+        <div class="section-label" id="expertise-title" data-en="03 / What I work with" data-es="03 / Conocimientos">03 / What I work with</div>
+        <div class="section-main"><h2 class="statement" data-en="From storefront details to the bigger picture." data-es="Desde los detalles de una tienda hasta la visión general.">From storefront details to the bigger picture.</h2><div class="pills" aria-label="Skills"><span class="pill">Shopify & Liquid</span><span class="pill">JavaScript</span><span class="pill">HTML & CSS</span><span class="pill">Git</span><span class="pill">WordPress</span><span class="pill">WooCommerce</span><span class="pill">Figma</span><span class="pill">React</span><span class="pill">Vue.js</span><span class="pill">Scrum Master training</span></div></div>
+      </section>
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-label" id="projects-title" data-en="04 / Selected work" data-es="04 / Algunos proyectos">04 / Selected work</div>
+        <div class="section-main"><p class="body-copy" data-en="A couple of websites I've contributed to during my freelance work." data-es="Algunos sitios web en los que he participado durante mi trabajo independiente.">A couple of websites I've contributed to during my freelance work.</p>
+          <a class="project-row" href="https://getfit.mx" target="_blank" rel="noopener noreferrer"><div><span class="project-title">GET FIT MEXICO</span><span class="project-sub">getfit.mx</span></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="project-row" href="https://feel.ink/" target="_blank" rel="noopener noreferrer"><div><span class="project-title">FEEL INk</span><span class="project-sub">feel.ink</span></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </section>
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="eyebrow" data-en="05 / Get in touch" data-es="05 / Contacto">05 / Get in touch</div>
+        <h2 id="contact-title" data-en="Have a project in mind?" data-es="¿Tienes un proyecto en mente?">Have a project in mind?</h2>
+        <p data-en="I'm open to conversations about web development, Shopify projects and new professional opportunities." data-es="Estoy abierto a conversar sobre desarrollo web, proyectos Shopify y nuevas oportunidades profesionales.">I'm open to conversations about web development, Shopify projects and new professional opportunities.</p>
+        <div class="contact-actions"><a class="button" href="mailto:carlosbcoaquirao@gmail.com"><span data-en="Send an email" data-es="Enviar un correo">Send an email</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="text-link" href="https://www.linkedin.com/in/carlos-bryan-coaquira-ortiz/" target="_blank" rel="noopener noreferrer">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </section>
+    </main>
+    <footer><span>© <span id="year">2026</span> Carlos Bryan Coaquira Ortiz</span><span class="status"><span class="dot" aria-hidden="true"></span><span data-en="Based in Cochabamba, Bolivia" data-es="Desde Cochabamba, Bolivia">Based in Cochabamba, Bolivia</span></span></footer>
+  </div>
+  <script>
+    (function(){
+      const button=document.getElementById('langButton');
+      let lang='en';
+      button.addEventListener('click',function(){
+        lang=lang==='en'?'es':'en';
+        document.documentElement.lang=lang;
+        document.querySelectorAll('[data-en][data-es]').forEach(el=>{el.textContent=el.getAttribute('data-'+lang)});
+        button.setAttribute('aria-label',lang==='en'?'Change language to Spanish':'Cambiar idioma a inglés');
+      });
+      document.getElementById('year').textContent=new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
